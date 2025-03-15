@@ -2,3 +2,4 @@ pymilvus
 pytesseract
 pdf2image
 streamlit
+python-poppler
