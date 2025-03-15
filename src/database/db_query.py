@@ -174,7 +174,6 @@ Judicial | Class Magistrate-V,
 
 ‘Thiruvananthapuram,
 /rrue copy/!
-
 """
 retrieved_docs = search_faiss(query, top_k=1)
 
