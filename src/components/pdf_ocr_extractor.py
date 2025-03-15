@@ -22,12 +22,12 @@ class PDF_OCR_Extractor:
         pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
         text_counter = 0
         for image_folder in glob.glob("output_images/*"):
-            os.makedirs("output_text/" + str(text_counter),exist_ok=True)
-            for text_file in glob.glob(image_folder + "/*.png"):
-                text = pytesseract.image_to_string(text_file)
-                with open(f"output_text/{text_counter}/text_{text_counter}.txt","w") as f:
-                    f.write(text)
-                print(f"Extracted text from: {text_file}")
+            text = ""
+            os.makedirs("output_text/"+str(text_counter)+"/",exist_ok=True)
+            for image_file in glob.glob(image_folder + "/*.png"):
+                text = text + " " + pytesseract.image_to_string(image_file)
+            with open(f"output_text/{text_counter}/text_{text_counter}.txt","w") as f:
+                f.write(text)
             text_counter += 1
         
 pdf_ocr = PDF_OCR_Extractor("output/output/*.pdf")
