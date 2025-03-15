@@ -31,7 +31,7 @@ embedding_fn = model.DefaultEmbeddingFunction()
 # print("Vector dim:", len(data[0]["vector"]))
 
 
-data_dir = "/home/joelvargheseoommen/Documents/Projects/Pycharm/R-squared/R-squared/text_files"
+data_dir = "R-squared/R-squared/text_files"
 
 
 # Process each file (assuming filenames are 1.txt, 2.txt, ..., 1000.txt)
@@ -44,7 +44,7 @@ for i in range(1, 1001):
 
         # Generate embedding
         embedding = model.encode(text)
-
+        # data =
         # Store in dictionary
     res = client.insert(collection_name="demo_collection", data=data)
 # Save embeddings as a NumPy file
