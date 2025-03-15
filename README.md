@@ -1,1 +1,1 @@
-# R-squared
+# Teams R-squared
