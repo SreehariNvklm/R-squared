@@ -23,7 +23,7 @@ class PDF_OCR_Extractor:
         text_counter = 0
         for image_folder in glob.glob("output_images/*"):
             text = ""
-            os.makedirs("output_text/{text_counter}/",exist_ok=True)
+            os.makedirs("output_text/"+str(text_counter)+"/",exist_ok=True)
             for image_file in glob.glob(image_folder + "/*.png"):
                 text = text + " " + pytesseract.image_to_string(image_file)
             with open(f"output_text/{text_counter}/text_{text_counter}.txt","w") as f:
