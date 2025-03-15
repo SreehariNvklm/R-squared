@@ -2,3 +2,4 @@ pymilvus
 pytesseract
 streamlit
 pymupdf
+sentence-transformers
