@@ -1,5 +1,4 @@
 pymilvus
 pytesseract
-pdf2image
 streamlit
 pymupdf
