@@ -1,4 +1,4 @@
-from pymilvus import MilvusClient, CollectionSchema, FieldSchema, DataType
+from pymilvus import MilvusClient, CollectionSchema, FieldSchema, DataType, Collection
 from sentence_transformers import SentenceTransformer
 import os
 
@@ -23,13 +23,13 @@ schema = CollectionSchema(
 )
 
 # Create collection if it does not exist; otherwise, get the existing collection.
-if not client.has_collection(collection_name):
-    collection = client.create_collection(name=collection_name, schema=schema)
-else:
-    collection = client.get_collection(collection_name)
-
+# if not client.has_collection(collection_name):
+#     collection = client.create_collection(collection_name, schema)
+# else:
+#     pass
 # Directory where text files are stored
-data_dir = "R-squared/text_files"
+collection1 = Collection(name=collection_name, schema=schema, using='default' )
+data_dir = "/path"
 
 # Process text files and prepare data for insertion.
 entities = []
@@ -44,8 +44,10 @@ for i in range(0, 2):
 
 # Insert embeddings into Milvus and load the collection.
 if entities:
-    file_numbers = [row[0] for row in entities]
-    embeddings = [row[1] for row in entities]
-    collection.insert([file_numbers, embeddings])
-    collection.load()
+    data = {
+        "file_number": [row[0] for row in entities],
+        "embedding": [row[1] for row in entities]
+    }
+    client.insert(collection_name, data)
+    collection1.load()
     print(f"Inserted {len(entities)} embeddings into Milvus")
