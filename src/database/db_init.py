@@ -9,7 +9,6 @@ index = faiss.IndexFlatL2(embedding_dim)
 model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
 all_docs = []
-
 for doc in glob.glob("R-squared/output_text/*/*.txt"):
     with open(doc,"r",encoding='utf-8') as file:
         f = file.read()
