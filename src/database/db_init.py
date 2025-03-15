@@ -3,18 +3,22 @@ from sentence_transformers import SentenceTransformer
 import glob
 import numpy as np
 
-embedding_dim = 768
+embedding_dim = 384
 index = faiss.IndexFlatL2(embedding_dim)
 
-model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
+model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
-all_embeddings = []
+all_docs = []
 
-for doc in glob.glob("output_text/*/*.txt"):
+for doc in glob.glob("R-squared/output_text/*/*.txt"):
     with open(doc,"r",encoding='utf-8') as file:
         f = file.read()
-        embeddings = model.encode(f)
-        all_embeddings.append(embeddings)
+        all_docs.append(f)
 
-index.add(np.array(all_embeddings, dtype=np.float32))
-faiss.write_index(index, "faiss_index.bin")
+embeddings = model.encode(all_docs)
+embeddings = np.array(embeddings).astype('float32')
+index_id = faiss.IndexIDMap(index)
+ids = np.array([i for i in range(len(all_docs))])
+index_id.add_with_ids(embeddings, ids)
+
+faiss.write_index(index, "R-squared/faiss_index.bin")

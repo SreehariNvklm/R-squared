@@ -1,142 +1,183 @@
 import faiss
-from sentence_transformers import SentenceTransformer
-import glob
 import numpy as np
+from sentence_transformers import SentenceTransformer
 
-index = faiss.read_index("faiss_index.bin")
-print("FAISS index loaded!")
+model = SentenceTransformer("all-MiniLM-L6-v2")
 
-model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
+embedding_dim = 384
+index = faiss.IndexFlatL2(embedding_dim)
+index_id = faiss.read_index("R-squared/faiss_index.bin")
 
-user_query = """
- 2019KERDNT
+def search_faiss(query_text, top_k=3):
+    """Searches FAISS for similar documents and returns detailed results."""
+    query_embedding = model.encode([query_text]).astype("float32")
 
-IN THE HIGH COURT OF KERALA AT ERNAKULAM
-PRESENT:
-‘THE HONOURABLE MR. JUSTICE P.UBAID
+    distances, indices = index_id.search(query_embedding, top_k)
 
-TUESDAY, THE 6TH DAY OF JANUARY 2015/167H POUSHA, 19361
+    return indices
 
-cel.Mc.to. 10 of 2015
+# Example Query
+query = """
+   IN THE COURT OF THE JUDICIAL I CLASS MAGISTRATE-V,
+(SPECIAL COURT FOR MARK LIST CASES), THIRUVANANTHAPURAM.
+Present:- Smt. Aswathy.S, Judicial First Class Magistrate-V,
+‘Thiruvananthapuram.
 
-IN CC 276/2014 OF THE JUDICIAL FIRST CLASS MAGISTRATE COURT,
-‘MALAPPURAM,
+Friday the 22 day of November, 2024/ Ist Agrahayana, 1946,
 
-(CRIME NO. 2/2013 OF VENGARA POLICE STATION , MALAPPURAM
+CC. 1694/2018
 
--ETITIONERS/ACCUSED :
+Complainant State represented by the Sub Inspector of Police, Railway Police
+Station, Thiruvananthapuram in Crime No. 210/2016.
 
-1. ABU TARIR, AGED 27 YEARS,
-8/0. KONJALIKUTTY, PANDIKADAVATH HOUSE, KARATHODU,
-‘URAKOM, VENGARA, 'MALAPPURAM DISTRICT
+(By Assistant Public Prosecutor Gr-I, Sri. Kiran Ravi)
 
-KABEER, AGED 23 YEARS,
-5/0.MOHAMMED, CHAKKINGALTHODI HOUSE, URAKOM
-MELMURI, MALAPPURAM DISTRICT
+Accused : Dhanam, aged 63 years, S/o. Karuppayya, Door No. 29/160,
+Market Road, Kulachal, Kanyakumari District, Tamil Nadu
+State.
 
-BHARATHAN, AGED 29 YEARS,
-5/0. BHASKARAN, ALAMBATTA HOUSE, URAKOM,
-MELMURI P.O., KARATHODU, MALAPPURAM DISTRICT.
+(By Advocate Sri, T1.Unniraja)
 
-4. SADIKALE, AGED 21 YEARS,
-'8/0.ALAVE, NARAYANKUNNEN HOUSE, URAKOM,
-MELMURI P.O., KARATHODU, MALAPPURAM DISTRICT.
+Charge + Offence punishable under section 354 of Indian Penal Code,
+1860.
 
-BY ADV. SRI.P.SAMSUDIN
+Plea + Not guilty
 
-[RESPONDENTS/STATE AND DE-FACTO COMPLAINANT:
+Finding : Not guilty
 
-1. STATE OF KERALA
-[REPRESENTED BY THE PUBLIC PROSECUTOR,
-RIGH COURT OF KERALA
-[BRNAKULAM ~682 031. (CRIME NO.2/2013 OF VENGARA
-POLICE STATION IN MALAPPURAM DISTRICT) .
+Sentence : Accused is found not guilty of offence punishable under section
 
-2. SUHALT, AGED 27 YEARS,
-$/0.MOHAMMEDKUTTY HAJI, THOTTASSERI HOUSE,
-‘OORAKAM KEEZHMORI, OK MURI P.O - 679 324
-‘THIRURANGADI TALUK, MALAPPURAM DISTRICT
+354 of Indian Penal Code, 1860 and he is acquitted of the said
+offences under section 248(1) Code of Criminal Procedure,
+1973. His bail bond stand cancelled and he is set at liberty.
 
-R2_BY ADV. SRI.K.C.ANTONY MATHER
-RI BY PUBLIC PROSECUTOR S¥T.S.HYHA
+Description of accused
+Name | Father'sname Age Residence Taluk
+Dhanam —Karuppayya 63 Kulachal Kanyakumari
+Date of
+Occurrence | Report of Apprehension, Period of ___-Released | Commence
+Complaint of accused detention on bail ment of
+undergone during wial
+investigation
+inquiry or trial
+for the purpose
 
-THIS CRIMINAL MISC. CASE HAVING COME UP FOR ADMISSION
-(ON 06-01-2015, THE COURT ON THE SAME DAY PASSED THE FOLLOWING:
- 2019KERDNT
-ceL.MC.No. 10 of 2015
+of S. 428 CrP.C
+
+21.02.2016 02.04,2016 21.02.2016 21.02.2016~ 23.03.2016 24.11.2022
+23.03.2016
+ 20fS
+
+‘Commencement of Close of trial ‘Sentence or order Explanation for
+evidence delay ___|
+19.11.2024 20.11.2024 22.11.2024 No delay J
+
+This case having been finally heard on today the court on the same day delivered the
+following :-
+
+JUDGMENT
+
+1. Accused stands trial for offence punishable under section 354 of Indian Penal
+
+Code, 1860.
+
+2. The prosecution case in brief is as follows :- On 21.02.2016, at 18.30 hours,
+
+at the general compartment of Sabari Express, when the train was about to
+reach at Varkala, the accused with an intention to outrage the modesty of CW1,
+touched on her private parts and showed obscene words against her. Thus
+accused has committed offence punishable under section 354 of Indian Penal
+
+Code, 1860.
+
+3. Final report was filed by the Sub Inspector of police, Railway police station,
+‘Thiruvananthapuram before the Hon'ble Chief Judicial Magistrate Court,
+Thiruvananthapuram and the case was taken on file as C.C. 763/2016.
+Cognizance was taken for the offences punishable w/ss. 294(b) and 354 of
+Indian Penal Code, 1860 against the accused. Thereafter, it was transferred to
+this court, in pursuance of the order of the Hon'ble Chief Judicial Magistrate,
+
+‘Thiruvananthapuram, the case was refiled as CC. 1694/2018.
+ 30fS
+4. On appearance of the accused, he was enlarged on bail on 23.03.2016...
+
+Copies of all relevant prosecution records were furnished to him under section
+207 Code of Criminal Procedure, 1973. Since ingredients of offence
+1ws.294(b) were not attracted after hearing prosecution and counsel for accused
+charge for the offence u/s. 294(b) was not framed and charge framed for
+offence ws. 354 of Indian Penal Code, 1860 read over and explained to the
+
+accused to which he pleaded not guilty and claimed to be tried.
+
+5. On the side of prosecution, PW1 was examined . As the material witnesses
+failed to support the prosecution case, the leamed Assistant Public Prosecutor
+‘gave up the CW2 to CW4. In the absence of any incriminating circumstances
+against the accused questioning of the accused under section 313(1)(b) Code
+of Criminal Procedure, 1973 was dispensed with. Accused was called upon to
+adduce evidence but no defence evidence was adduced from the side of the
+
+accused,
+
+6. Heard both sides and perued records.
+
+7. The following points_have arisen for determination:
+
+(1) Whether on 21.02.2016, at 18.30 hours, the accused with an intention to
+outrage the modesty of PW, touched on her private parts at the general
+compartment of Sabari Express and thereby committed an offence
+
+punishable under section 354 of Indian Penal Code, 1860?
+ 4ofS
+(2) If the accused is found guilty? What is the order as to sentence?
+
+8. Point No,
+
+fo avoid repetition and for brevity, point number are considered
+together. Prosecution case is that accused has committed offence punishable
+under section 354 of Indian Penal Code, 1860. PWi deposed that she has no
+
+grievance against the accused person. Furthermore she denied her statement
+
+before the police. According to her the accused not assaulted.
+
+9, The leamed Assistant Public Prosecutor had given up other witnesses and he is,
+justified in doing so as the material witness did not support the case of
+prosecution, Having considered evidence on record, this court is of the view
+that prosecution has failed to prove the guilt of accused. For the said reason
+
+these points are found against the prosecution.
+
+10. Point No. 2 :- Upon the finding in point no. 1, the accused is found not guilty
+of offence punishable under section 354 of Indian Penal Code, 1860 and he is
+acquitted of the said offences under section 248(1) Code of Criminal
+
+Procedure, 1973. His bail bond stand cancelled and he is set at
+
+No material objects produced in this case.
+
+Dictated to the Confidential Assistant, transcribed and typed by her, corrected by me
+‘and pronounced in the open court on this the 22” day of November, 2024,
+
+Sd/-
+Judicial I Class Magistrate-V,
+‘Thiruvananthapuram,
+ SofS
 
 APPENDIX
+Witnesses for prosecution:=
+PW 2 XXXX
+Exhibits for prosecution:- NIL,
+Material objects marked NIL
+Witmesses & Exhibits for defence: NIL
+Sd/-
+Judicial | Class Magistrate-V,
 
-PETITIONERS’ ANWEXURES:
+‘Thiruvananthapuram,
+/rrue copy/!
 
-ANMEXURE-AL: COPY OF THE FINAL REPORT IN CRIME NO.2/2013 OF
-VENGARA POLICE STATION.
-
-ANNEXURE-A2: COPY OF THE AFFIDAVIT DATED 22.12.2014 SWORN IN BY
-‘THE 2ND RESPONDENT.
-
-RESPONDENTS’
-
-wr
-
-//7808 COPY//
-
-P.A To JUDGE
- 2019KERDNT
-
-P.UBAID, J.
-
-Crl.M.C No.10 of 2015
-
-Dated this the 6" day of January, 2015
-
-ORDER
-
-The petitioners herein are the four accused in
-C.C No.278/2014 of the Judicial First Class Magistrate Court,
-Malappuram. Crime in the said case was registered under
-Sections 341, 323 and 324 r/w 34 of the Indian Penal Code, on
-the complaint of one Suhail. The petitioners now seek orders
-quashing the prosecution as against them on the ground that
-they and the defacto complainant have amicably settled the
-dispute out of court. The defacto complainant Suhail is the
-second respondent in this proceeding. He has filed affidavit to
-the effect that he has settled the whole dispute with the accused,
-and he has no complaint or grievance now. I am well satisfied
-that there is a real and genuine settlement between the parties,
-and I find that continuance of prosecution in such a situation will
-not serve any purpose, other than wasting the precious time of
-the court. Nobody will support the prosecution if the case
-
-against the petitioners goes to trial.
- 2019KERDNT
-
-CALM No.10 0f 2015 2
-
-In the result, this Criminal Miscellaneous Case is
-allowed. The prosecution against the petitioners herein in C.C
-'No.278/2014 before the Judicial First Class Magistrate Court,
-Malappuram, will stand quashed under Section 482 of the Code
-of Criminal Procedure. Accordingly, the petitioners will stand
-released from prosecution, and the bail bond, if any, executed by
-
-them will stand discharged.
-
-P.UBAID
-JUDGE
-
-ab
-
- 
 """
+retrieved_docs = search_faiss(query, top_k=1)
 
-query_embedding = model.encode([user_query]).astype("float32")
-
-query_embedding /= np.linalg.norm(query_embedding, axis=1, keepdims=True)
-
-k = 5
-
-distances, indices = index.search(query_embedding, k)
-
-print("Most similar document indices:", indices)
-print("Distances:", distances)
+with open(("R-squared/output_text/"+str(retrieved_docs[0][0])+"/text_"+str(retrieved_docs[0][0])+".txt"),"r") as file:
+    f = file.read()
+    print(f)
