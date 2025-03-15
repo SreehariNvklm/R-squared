@@ -1,10 +1,10 @@
 # Team R-squared
 
-## Valid Extraction and Retrieval of Data from Information on Court Trials(VERDICT) //acronym
+## Valid Extraction and Retrieval of Data from Information on Court Trials(VERDICT)
 A fully connected pipeline for people to access their court cases, to retrieve data, to ask doubts and to ask for guidance using a chatbot feature. 
 ## What's VERDICT? 
 ### Features
-- **PDF Processing:** Convert court case PDFs into images and extract text using OCR.
+- **PDF Processing:** Convert court case PDFs into images using pymupdf and extract text using OCR.
 - **Search & Query:** Index extracted data for efficient searching and querying.
 - **Chatbot Interface:** Interact with the dataset using natural language queries.
 
