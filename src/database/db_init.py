@@ -1,52 +1,51 @@
-from pymilvus import model
-from pymilvus import MilvusClient
+from pymilvus import MilvusClient, CollectionSchema, FieldSchema, DataType
+from sentence_transformers import SentenceTransformer
 import os
 
+# Initialize the embedded Milvus instance with a local database file.
+# This creates/opens a Milvus database in-process.
 client = MilvusClient("milvus_demo.db")
 
-if client.has_collection(collection_name="demo_collection"):
-    client.drop_collection(collection_name="demo_collection")
-client.create_collection(
-    collection_name="demo_collection",
-    dimension=768,  # The vectors we will use in this demo has 768 dimensions
+# Load SentenceTransformer model and determine the embedding dimension.
+model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+embedding_dim = model.get_sentence_embedding_dimension()
+
+collection_name = "text_embeddings"
+
+# Define the collection schema.
+schema = CollectionSchema(
+    fields=[
+        FieldSchema(name="id", dtype=DataType.INT64, is_primary=True, auto_id=True),
+        FieldSchema(name="file_number", dtype=DataType.INT64),
+        FieldSchema(name="embedding", dtype=DataType.FLOAT_VECTOR, dim=embedding_dim),
+    ],
+    description="Text file embeddings collection"
 )
 
-embedding_fn = model.DefaultEmbeddingFunction()
+# Create collection if it does not exist; otherwise, get the existing collection.
+if not client.has_collection(collection_name):
+    collection = client.create_collection(name=collection_name, schema=schema)
+else:
+    collection = client.get_collection(collection_name)
 
-# docs = [
-#     "Artificial intelligence was founded as an academic discipline in 1956.",
-#     "Alan Turing was the first person to conduct substantial research in AI.",
-#     "Born in Maida Vale, London, Turing was raised in southern England.",
-# ]
-#
-# vectors = embedding_fn.encode_documents(docs)
-# print("Dim:", embedding_fn.dim, vectors[0].shape)  # Dim: 768 (768,)
-#
-# data = [
-#     {"id": i, "vector": vectors[i], "text": docs[i], "subject": "history"}
-#     for i in range(len(vectors))
-# ]
-#
-# print("Data has", len(data), "entities, each with fields: ", data[0].keys(), "vector value is ", vectors[0])
-# print("Vector dim:", len(data[0]["vector"]))
+# Directory where text files are stored
+data_dir = "R-squared/text_files"
 
-
-data_dir = "R-squared/R-squared/text_files"
-
-
-# Process each file (assuming filenames are 1.txt, 2.txt, ..., 1000.txt)
-for i in range(1, 1001):
-    file_path = os.path.join(data_dir, f"{i}.txt")
-
-    if os.path.exists(file_path):  # Ensure file exists
+# Process text files and prepare data for insertion.
+entities = []
+for i in range(0, 2):
+    file_path = os.path.join(data_dir, f"text_{i}.txt")
+    if os.path.exists(file_path):
         with open(file_path, "r", encoding="utf-8") as f:
-            text = f.read().strip()  # Read text and remove extra spaces
+            text = f.read().strip()
+        # Generate embedding and convert to list format.
+        embedding = model.encode(text).tolist()
+        entities.append([i, embedding])
 
-        # Generate embedding
-        embedding = model.encode(text)
-        # data =
-        # Store in dictionary
-    res = client.insert(collection_name="demo_collection", data=data)
-# Save embeddings as a NumPy file
-
-print(f"Saved files")
+# Insert embeddings into Milvus and load the collection.
+if entities:
+    file_numbers = [row[0] for row in entities]
+    embeddings = [row[1] for row in entities]
+    collection.insert([file_numbers, embeddings])
+    collection.load()
+    print(f"Inserted {len(entities)} embeddings into Milvus")
