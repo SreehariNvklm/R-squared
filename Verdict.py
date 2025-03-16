@@ -10,6 +10,6 @@ btn = st.button("Fetch Case Files")
 if btn and user_input:
     query_obj = DB_Query()
     container = st.container(border=True)
-    res = query_obj.search_faiss(user_input,1)
+    res = query_obj.search_faiss(user_input,2)
     res = res.replace("File corrected:","")
     container.write(res)
