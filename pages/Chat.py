@@ -28,7 +28,7 @@ if "messages" not in st.session_state or "chat_history" not in st.session_state:
     st.session_state.messages = []
 
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-model = genai.GenerativeModel("gemini-2.0-flash")
+model = genai.GenerativeModel("gemini-1.5-flash")
 chat_model = model.start_chat(history=st.session_state.chat_history)
 query_obj = DB_Query()
 
