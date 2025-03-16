@@ -1,0 +1,414 @@
+ Sample Application Form
+
+(ay be used for preparing the information before filing the Online Application)
+
+‘COLLABORATIVE RESEARCH SCHEME (CRS)
+
+Under TEQIP
+Proforma Cum Evaluation Sheet
+
+i Tnstitute Details
+
+@ Tnsitute AICTE Permanent ID No,
+
+o Name of the Institute
+
+© “Type ofthe Institute
+
+(| Contact detail daress of Institution
+
+© Email
+
+© FAX
+
+@ Telephone
+
+® PAN detail
+
+12 | Bank Details
+
+‘@) | Name of the Bank
+
+(| Branch Name
+
+(© | Bank Branch Adress (With PIN)
+
+(@__| Name of the Account Holder
+
+(| Type of the Account ‘Carent Account | Saving Account
+
+(| Account Number
+
+(@ | Confirm Account Number
+
+(| IFSC Code
+
+(| Confirm IFSC Code
+
+@ | Bank MICR Code
+
+1.3 | Details of the Principal Investigator (PD)
+
+@
+
+TEQIP Faculty 1D
+
+®
+
+‘Name of the PI
+
+o
+
+Department
+
+ (@ [Appointment Type Regular Temporary | Adhioe
+(© | Contact details ‘ress Callno Email
+(| Whether any other ongoing | Yeo Project Details (iFany)
+Sponsored project by the PL
+[3.1 | Detals of the Collaborative - Principal Investigator 1 (Co — PI 1)
+(One preferably a regular faculty of Host TEQUP institute to which the PI belongs shal be Co-
+JPret
+(@ | TEQIP/AICTE Faculty 1D
+()_[ Name of the Co-PT
+(©) _ [Name ofthe Institution
+(@ | Department industry Sector
+© | Appoiniment Type Regular | Temporary Adioe
+| Comact Details ‘Adress [Cell no
+@ [PG Yeo rea of specialization
+® PD eso wea of specialisation
+(]_| Teaching Experience in years
+@ | Research & Tndustrial
+Experience in years
+® | Namber of Publications ‘National Journal | Intemational Journal
+Jnlast3 years (National /
+Invermational journals)
+@ | Number of Patents Registered
+(Ga) _ | Number of Ph D students Guided
+[32 [Details ofthe Collaborative - Principal Investigator CO-PI 2,3)
+‘CO =PI2 from any TEQIP Insttute/IET/NIT
+CO ~PI3,4 from any TEQIP Institute/IT/NIT/Industry/Abroad Faculty
+(@)__ [ TEQIP/AICTE Faculty 1D
+(6) [Name of the Co-PL
+
+ (©)_ | Name of the Institution Organization
+(@__|[ Deparment industry Sector
+(©) | Appointment Type Regular Temporary | Adhoe
+| Contact Details Takes Callno Email
+@ (PG yesINo rea of specialization
+@ [PRD WewNo ea of specialization
+@ | Teaching Experience ia years
+@ | Research & Industrial
+Experience in years
+(__| Number of Publications ‘National Journal | International Journal
+in last 3 years (National /
+International journals)
+@ | Number of Patents Registered
+Gay | Namber of PhD students Guided
+14 _ [Details of the CRS Proposal
+(@)__| Title of the Project proposal
+()_ | Area of the Proposal [iEneray
+Environment
+‘Climate Change & Sustainable Habitat
+Healthcare
+“Information & Communication
+Technology
+‘Materials (Advanced)
+'Nanatechnology Hardware
+‘Manufacturing
+‘Security and defense
+110.Water Resources
+(© _| Name ofthe Lab where the research would be
+conducted
+(@ | The Department under which the labs
+
+established
+
+ 1s
+
+‘Academic credentials of Principal Investigator (PD,
+
+Parameter/ Criteria Tnpat by | Tnput by | Max. | Marks Marks
+Institute | Institute | Marks | Awarded by | Awarded by
+‘the System | the Experts
+@ [PAD Select 10
+Yes/No
+(®) | Teaching Experience in| Enver z
+years Years
+© | Research & Industrial Enter z
+Experience in years Years
+(@ | Number of Publications | Enter +
+in ast 3 years (National | Number
+Journals)
+(| Number of Publications | Enter z
+in ast 3 years (Intemational | Number
+Journals)
+@_| Namber of Patents Enter 3
+Registered Number
+(| Membership of the Select 3
+Professional / Learned Yes/No
+bodies! Societies
+@)_| Awards tate) Select z
+Yes/No
+@_[ Awards (National) ‘Select 2
+Yes/No
+@ | Awards (international) Select T
+Yes/No
+Sub Total 5
+16 | Credentials of Institute
+Parameter? Criteria Tnput by ‘Max. | Marks
+Institute ‘Marks | Awarded by | Awarded
+the System | by the
+Experts
+‘@) | Research projects completed in| Enver 3
+last $ years Number
+(®) | Consultancy Research projects | Enter 3
+‘completed in last S yrs Number
+(| Number of Courses Accredited in | Enter 3
+the Institutes Number
+
+ (@_ | Whether the UGIPG course under | Enter 3
+‘hich the proposal is submitted, i] Yes/No
+aceredited by NBA?
+‘Sub Total 20
+
+{C7 | Justification of the project:
+(@) | Facilities equipment available in the Department in the area of proposed research
+SINo, [Name of equipment] Make and model [Costin Rs, | Year purchased
+Parameter / Criteria Tnpat by Institute Max. | Marks
+Marks | Awarded by
+(@) | Objectives and Relevance of the Research 0
+project
+() | Research status ofthe Proposal National] International
+(National or International) .
+©_[ Expected outcome 3
+(@_| Research Methodology 10
+© _| Technical novelty and wtiity 10
+(| Possible patentability of the research 10
+‘outcome
+Sub Total s
+Grand Total 100
+18 | Non-Recurring Budget
+(@) | S.No. | Proposed | Specifications | Number | Estimated | Experts Recommendation
+‘equipment/s of units | Costin | (If proposal is recommended )
+Rs. Yes/No | Number | Amount
+of Units | in Rs.
+Total NON RECURRING] Bid get Total amount RSABC
+Estimate sued by
+experts
+
+ 1.9 | Recurring Budget
+a Experts Recommendation
+Estimated
+S.No. Components | Specifications | CONT es, —
+red No
+I Domestic
+Travel
+‘Consumables
+‘Contingencies
+Miscellaneous
+Total ( RECURRING) Budget Total amount
+Estimate recommended by experts R“POR
+1.10 ‘Total Recommended Amount = Rs ABC +Rs.PQR
+
+11__| Attachments (In PDF format)
+
+(@) | Mandate Form
+
+{(b) | Certificate by the Head of Institution for the proposal
+
+(@) | Brief of Research Proposal containing project activities, schedule /imeling, TEEVaRCE OT
+(©) _ | Cottaboration, industtal & soctal ouisomes ete (not more than S00 words)
+
+TW | Equipment List
+
+(©) | Bio Data of CoP 12,54)
+
+ All India Council for Technical Education
+
+‘Nelson Mandela Marg, Vasant Kunj, New Delhi-1 10070
+
+Mandate Form for Institute/College/University/Other Organizations
+
+‘Name of the Beneficiary Institute
+
+Permanent ID of the Insitute, iF any
+
+Head of the Institute (Tick One)
+
+Director (Registrar / Principal / Others (PL
+Speci
+
+Type of Institute (Tick One)
+
+Govt. / Govt aided Self Finance / Private et.
+
+‘Address of the Tnstitute
+
+PAN. No.of the Institute
+
+GST No. of the Insitute
+
+E-mail ID of the Head of the Institute
+
+‘Name of the Bank
+
+Branch Name and Branch Code
+
+‘Adress ofthe Bank with PIN Code
+
+Telephone No. of the Bank
+
+‘Name of the Account Holder with Designation
+
+“Account Type (Tick One)
+
+Savings / Carrent
+
+‘Account Number
+
+Bank Branch IFSC Code
+
+‘Bank Branch MICR Code
+
+‘Whether the Account isin the Name of
+Beneficiary Institute (Tick One)
+
+Yes No
+
+‘Wither the Account is Operational (Tick
+One)
+
+YedNo
+
+‘Whether the account is a No-Faill
+Aecount(Tick One)
+
+Yes No
+
+2
+
+‘Wither the Account is Joint Account yes
+sive details)
+
+Yes No
+
+Wis declared that all information provided above are tue and complete in all respects.
+
+Signature of the Account Holder
+with Designation
+
+Or Authorized Signatory
+
+With Institute Seal
+
+Date
+
+CCentified thatthe above details are verified on
+(date).
+(Banker’
+
+ (This certificate should be printed on the official letterhead of the Host Institute)
+
+Letter No, = Date- dd-mm-yyyy
+
+Certificate of Collaboration
+
+A certificate of collaboration for the research <Name of the research> between the
+Principal Investigator <Name of PI> ofthe Host institute/industry sector <Name of lntitute>.
+
+We the following Pls wish to work on this project. We agree to work in harmony and
+hereby understand thatthe project needs to be completed in the time-bound manner
+
+01 Co- Principal Investigator-L_ <Name of Co-PI-1> Name of the Institute>
+02 Co- Principal Investigator-2__ <Name of Co-P1-2> <Name of the Institute>
+03 Co- Principal Investigator-3_ <Name of Co-P1-3> <Name of the Institute>
+(04 Co: Principal Investigator-4_ <Name of Co-PL-4> <Name of the Institute>
+
+Under the collaborative research scheme- TEQIP III for the proposal of the grant,
+‘complying with the guidelines of AICTE and TEQIP.
+
+Signature of Head of the Host Institute
+
+Host Institute Seal
+ Collaborative Research Scheme
+
+Required Equipment List
+
+[Name of the Host Institute:
+
+No.
+
+Proposed
+‘equipmenvs
+
+‘Specifications
+‘equipments
+
+Number of
+units required
+
+Cost of
+single unit
+
+‘Justification of the
+Equipment
+
+Estimated
+Cost in
+
+Signature of the Applicant
+
+ Bio Data of Co Principal Investigator
+
+Date of birth
+
+‘Mobile Number
+
+E-muil Address
+
+Postal Address
+
+© | Whether the Co- Pls working in
+Insttute/Industry
+
+7nstitute/ Industry Currently Working
+
+8 | Whether faculty working or Working “Superannaated
+superannuated (Tiek One)
+| Name ofthe Strean/Department
+TO | Academic eredeniials PG Qualification
+Degree)
+PhD. (YevNo)
+
+11 | No.of PhDs. Guided
+
+12 | Experience (Yrs)
+
+‘Teaching Research
+
+Tndustrial [Total
+
+T3 | Membership of Professional Bodies
+
+TH | Publications
+
+“Thesi/Book
+
+Journals
+
+15 | ConferenvevSeminars Atended
+
+16 | Patents (if any) (Nos.)
+
+17 | Other (awards iFany)
+
+TS | Any other informan
+
+Declaration
+
+L hereby declare that the details provided above are true and best of my
+
+knowledge.
+
+Signature of the Co-PL
+

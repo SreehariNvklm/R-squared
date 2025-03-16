@@ -1,5 +1,6 @@
-pymilvus
+chromadb
 pytesseract
 streamlit
 pymupdf
 sentence-transformers
+google-generativeai

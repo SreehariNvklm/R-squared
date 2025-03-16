@@ -1,0 +1,315 @@
+ IN THE COURT OF JUDICIAL MAGISTRATE OF THE FIRST CLASS- II
+
+THIRUVANANTHAPURAM
+
+Present: Sri, Vinod Babu M.U
+
+Judicial Magistrate of the First Class 111
+
+Thursday, 20" day of February 2025/ 1* Phalguna 1946
+CC. No. 568/2014
+(Cantonment Police Station Crime 1327/2013)
+Complainant State represented by the Sub Inspector of Police,
+
+‘Cantonment Police Station.
+(By Sri, Manu KallampallyAssistant Public
+Prosecutor Grade-I)
+
+Accused Ajay, aged 42/14 years, S/o Nataraja Damodharan,
+Essakku veedu, TC 14/1754(3), Arappura lane,
+Anamughom ward, Kadakampally village.
+
+(By Adv. Sri. Sureshkumar.S)
+
+Offences Under Sections 66 and 66 (c) of the Information
+‘Technology Act.
+
+Plea Not Guilty
+
+Finding Not Guilty
+
+Order Accused is acquitted under Section 248(1) Cr.PC for
+the offences Under Sections 66 and 66 (c) of the
+Information Technology Act.
+
+DESCRIPTION OF ACCUSED.
+Rank and Name Father’s Name Age —_Village Taluk
+1 Ajay 42/14 Kadakampally | Thiruvananthapuram
+
+Damodharan
+
+DATES OF
+ Offence | Complaint | Apprehension] Period of detention | Release on
+‘undergone during bail
+investigation, inquiry or
+trial for the purpose of S.
+
+428 Cr.PC
+Between | 25.03.14 | 01.03.14 01.03.14 01.03.14
+10.10.2013
+and
+29.10.2013
+Commencement] Commencement] Close of trial | Sentence or | Reason for
+of trial of evidence order delay
+25.04.22 23.05.22 18.02.25 20.02.25 No delay
+
+This case having been finally heard on today, the court today delivered the
+followi
+
+JUDGMENT
+
+1, This case has arisen on a final report filed by the Sub Inspector of Police,
+Cantonment Police Station in crime No, 1327/2013 alleging the commission of
+offences against the accused under Sections 66 and 66 (c) of the Information
+‘Technology Act.
+
+2. The prosecution case in brief is as follows:- The informant is the Accountant
+
+‘Manager of Marikar Motors at Statue, Thiruvananthapuram. The accused was
+
+the employee of account section of Marikar Motors, Statue,
+‘Thiruvananthapuram. The accused in between 10.10.2013 and 29.10.2013, on
+several ocassions by using the network connection of witness no. 3 in the final
+report download the account of Marakkar branch maintained in State Bank of
+Travancore, Statue branch and cause interruption to the usage of computer in
+Marikar Motors, Statue, Thiruvananthapuram and locked the account and
+thereby caused interruption to the usage of computer. The accused thus
+ 3
+
+alleged to have committed the offences under Sections 66 and 66 (c) of the
+
+Information Technology Act.
+
+‘On submitting the final report, the case was taken on file as. CC. 568/2014.
+
+On the issuance of summons, the accused appeared before the court. The
+
+accused was furnished with copies of prosecution records and thereby
+
+complied with the mandate under section 207 of Criminal Procedure Code.
+
+‘Thereafter, the accused was heard on the charge levelled against him.
+
+‘The charge was framed under Section 354 of the Indian Penal Code, read over
+
+and explained to him to which he pleaded not guilty and claimed to be tried.
+
+From the side of the prosecution, the prosecution examined eight witnesses as
+
+PW1 to PWS and marked fifteen documents as Exts.P1 to P14 series & P15.
+
+No defence evidence was adduced from the side of the defence.
+
+(On the completion of prosecution evidence, the accused was questioned under
+
+section 313 (1) (b) of the Criminal Procedure Code, in which he denied all the
+
+incriminating circumstances appearing in prosecution evidence against him.
+
+Heard the learned Assistant Public Prosecutor and the learned counsel for the
+
+accused.
+
+‘The points that arise for determination are as follows:~
+
+1 Did the accused in between 10.10.2013 and 29.10.2013, on several
+
+occasions by using the network connection of witness no. 3 in the
+final report dishonestly and fraudulently performed the act referred i
+
+Section 43. of the Information Technology Act and unauthorisly
+download the account of Marikar branch maintained in State Bank of
+Travancore, Statue branch and cause interruption to the usage of
+computer in Marikar Motors, Statue, Thiruvananthapuram and locked
+the account and thereby caused interruption to the usage of
+computer and thus alleged to have committed the offence under
+Section 66 of the Information Technology Act?
+ 4
+
+2 Did the accused in between 10.10.2013 and 29.10.2013, on several
+occasions by using the network connection of witness no. 3 in the fi-
+nal report dishonestly and fraudulently uses the password of Marikar
+‘Motors, Statue, Thiruvananthapuram and used their unique identifica~
+tion feature of computer without the consent of the authorized officer
+of Marikar Motors, Statue, Thiruvananthapuam and performed the
+act referred in Section 43 of the Information Technology Act and
+unauthorisly download the account of Marikar branch maintained in
+State Bank of Travancore, Statue branch and cause interruption to the
+usage of computer in Marikar Motors, Statue, Thiruvananthapuram
+and locked the account and thereby caused interruption to the usage
+of computer and thus alleged to have committed the offence under
+‘Section 66 (¢) of the Information Technology Act?
+
+3 If the accused is found guilty, what is the order as to sentence?
+
+9. Boint No.1 & 2: PW1 deposed before the court that the accused is the hus-
+band of PW1, She did not know about the details of the case. Hence PW1
+‘tumed hostile to the prosecution,
+
+10. PW2 deposed before the court that the incident occurred in the year 2013
+while he had been working as Assistant Manager in account section of Marikar
+
+Motors, Thiruvananthapuram. On 10.10.2013 their caused some interruption
+to the online transaction of Marikar motors with the SBT, Secretariat branch,
+(on inquired about it it is revealed that someone reduced the merchant unit in
+the computer system of Marikar Motors which caused interruption to the
+‘money transaction with SBI. The issue was resolved on the same day but on
+the next day (11.10.2013) the account of Marikar Motors was locked and the
+customers could not make payment to Marikar Motors. The customers of
+Marikar motors made complaint against it in the show room. A complaint was
+filed on this incident to the police. This was done by someone who entered into
+the unique identification system of the computer downloaded it
+ 5
+
+‘unauthorisingly and committed this thing. Based on the complaint the police
+identified the accused by tracing his IP address.
+
+11. PW3 deposed before the court that while he had been working as Civil Police
+Officer of City Cyber Cell the statement of PW1 was recorded in his presence.
+
+12, PW4 deposed before the court that at the time of the incident he was working
+as Assistant General Manager of Marikar Motors, Statue. The accused was
+terminated from service of Marikar Motors as per the direction of the
+‘management. There was some interruption occurred in the banking transaction
+of Marikkar motors due to the modification in the password of the computer
+which resulted in locking the account and this was done by someone who
+reset the password and locked the account, All these things happened when the
+accused was terminated from the office of Marikar Motors,
+‘Thiruvananthapuram,
+
+13, PWS deposed before the court that on 02.11.2013 while he had been working,
+as Sub Inspector of Cantonment police he had registered the FIR in this case
+based on the petition forwarded to Cantonment police station.
+
+14, PW6 deposed before the court that in between 04.01.2014 and 07.11.2014, he
+took the investigation in this case on 03.02.2014 and collected evidence this
+case including login details and IP address details. During the course of
+investigation he collected account details and on the side of Marikar motors
+and IP address details. He had completed the investigation and filed final report
+in this case.
+
+15. PW7 deposed before the court in the year 2014 while he had been working as
+Civil police officer of City Cyber Cell. He identified the IP address send to
+him as Soja A and also identified the account statement and Login ID of
+‘Marikar motors.
+
+16. PWB deposed before the court that while he had been working as Circle
+Inspector of Cantonment police station on 04.11.2013, he took the
+investigation in this case and collected the account details from Marikar
+‘Motors of SBT, Marikar motors and sent to scientific expert.
+ 6
+
+17. Thave analyzed the evidence of PW1 to 8 and perused Ext P1 to P14 series.
+On going through Ext P6 FIR it is seen that the incident occurred in between
+10.10.2013 to 31.10.2013 and information received the police station on
+(02.11.2013. After that the FIR was filed before this court on 04.11.2013. Itis
+interesting to be noted that Ext P6 FIR registered by PWS not recorded the
+reason for delay and instead of it, it is recorded as no delay. It is pertinent to
+note that it is settled proposition of law that the delay in lodging the FIR and
+delay in the sending of FIR before this court must be satisfied. ‘The complaint
+filed by the PW1 is silent about the name of the accused. PW3 deposed before
+the court during the cross examination that he had taken down the FIS
+statement of the PW1, But no such FI Statement was seen found in the
+prosecution records and the prosecution was no consistent version for this
+matter. In this case, the allegation of the prosecution is that someone in
+between the dates 10.10.2013 to 31.10.2013 unauthorisly used the computer
+datas of Marikar Motors, Thiruvananthapuram and done malpractice. To the
+tax returns and SBT bank accounts and thereby caused interruption to the day
+to day business affairs of the Marikar Motors, Thiruvananthapuram. It is perti-
+nent to note that none of the officials of SBI, Statue branch was examined by
+the prosecution to strengthen the prosecution story. The prosecution bring a
+bundle of documents relating to the transactions of Marikar Motors Limited.
+Ext PI is the complaint, Ext P3 is the letter sent to the SBT Bank by Marikar
+Motors and another one is Ext P4 which is a return statement of Kerala
+Commercial Tax Department executed by the Manager, Marikar Motors.
+Ext P2 is an another document sent by the accountant to the Assistant manager
+of Marikar Motors dated 23.10.2013. On perusal of this letter it is seen that
+the Marikar Motors admitted the mistake crept in the password of commercial
+site of the said company. The letter was found to be written on 23.10.2013.
+As per the version of the prosecution witnesses accused is terminated from
+
+this office prior to 23.10.2013. So the evidence brought out by the prosecution
+is not tally with the version of the prosecution that the accused unauthorisingly
+ 7
+
+downloading or copying or interrupting the digital system of computer of
+Marikar Motors with a dishonest intention so as to cause any interruption to
+the day to day business affairs of Marikar Motors.
+
+18. It is pertinent to note according to Section 43 of the Information Technology
+‘Act which imposes liability for defined set of action performed personally
+which subject t0 individual to penalties but not to criminal prosecution.
+However, when these actions was carried out with guilty state of mind as a
+specified by fraudulently or dishonestly in section 66 of the Information
+‘Technology act they constitute an offence. By virtue of section 66, additionally
+any act as defined u/s, 43 is done dishonestly and fraudulently attract section
+66 of the Information Technology Act. So in order to constitute the offence of
+section 66 and 66 C of the Information Technology Act someone has to done
+act with dishonest or fraudulent manner and should cover the element of
+
+deceit which is an additional concomitant for constituting act as cheating
+
+equivalent to the definition under section 415 of Indian Penal Code. Here in
+this case, the prosecution has miserably failed to prove the offence of Section
+66 and 66 C of Information Technology Act against the accused based on the
+prosecution witnesses and documents the light of the discussions above
+‘mentioned. Hence, points no. 1 and 2 are found against the prosecution.
+
+10. Point no. 3:-In view of my findings on Points Nos.1 and 2, it is found that the
+accused is found not guilty for the offences punishable under Sections 66 and
+66 (c) of the Information Technology Act.
+
+11, Inthe result, the accused is found not guilty and acquitted under section 248(1)
+of the Code of Criminal Procedure, 1973 for the offences under sections 66 and
+(66 (c) of the Information Technology Act. The bail bond of the accused stands
+cancelled and he is set at liberty.
+
+(Dictated to the Confidential Assistant, transcribed and typed by her, corrected and
+‘pronounced by me, in open court, on this the 20° day of February 2025).
+
+sd’
+Judicial Magistrate of the First Class~ 1
+‘Thiruvananthapuram
+ ‘Witnesses for Prosecution:
+
+PWI/CWS : Soja, occurrence witness examined on 23.05.22
+PW2/CW1: Manikkuttan, informant examined on 12.07.22
+PW3/CWS : Prasantha, police witness examined on 12.07.22
+PW4/CW2: Babu, occurrence witness exmained on 26.09.22
+PWS/CW7 :Sajikumar, police witness examined on 20.012.23
+PW6/CW9 : Sudheer, police witness examined on 20.01.23
+PW7/CW6: K-E Baiju, police witness examined on 26.09.23
+PWB/CW8 : Santhosh, police witness examined on 11.01.23
+
+Exhibits for P
+
+PL : Complaint dated 26.10.13 proved by PW2
+
+P2 + Letter dated 23.10.13 proved by PW2
+
+PB, : E-mail dated 19.10.13 proved by PW2
+
+P4 Return details dated 26.10.13 proved by PW2
+PS, + Return payment details dated 26.10.13 proved by PW2
+P6 : ELLR dated 02.11.13 proved by PWS
+
+P7 + Bail bond dated nil proved by PWG
+
+PB + Report dated 01.03.14 proved by PW6
+
+po + Report dated 11.03.14 proved by PW6
+
+P10 Report dated 03.02.14 proved by PW6
+
+Pil For No. 15 dated 01.03.14 proved by PW6
+PI2 2 Letter dated 26.02.14 proved by PW7
+
+Pi3series : IP address details dated 18.02.14 proved by PW7
+Pi4series : Login details from 01.10.13 to 31.10.13 proved by PW7
+PIS, + Report dated nil proved by PW8.
+
+si.
+Judicial Magistrate of the First Class— 111
+‘Thiruvananthapuram
+
+irrue Copy!
