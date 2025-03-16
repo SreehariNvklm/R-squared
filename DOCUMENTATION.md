@@ -28,15 +28,36 @@ The retrieved text(court document) is sent to the large language model as contex
 
 # Design
 ## PDF to Image conversion
-- **Used PyMuPdf** - a python binding for the MuPdf library.
-                   - lightweight, high performance conversion of Pdf files to other supported formats.
-                   - here used for pdf to image conversion.
-- Directories created for each pdf file -> Converted to image file(per pdf page) -> stored under respected file directory
+- **Logic** : Straightforward text extraction from the pdfs not possible due to its inherent image nature. Therefore conversions to image files is necessary.
+- **Used PyMuPdf** - a Python binding for the MuPdf library to facilitate lightweight, high performance conversion of Pdf files to other supported formats, here for pdf to image conversions.
+- *Directories created for each pdf file -> Converted to image file(per pdf page) -> stored under respected file directories(.png).*
+
+## Text extraction from Image files
+- **Logic** : The contents present in the images are to be extracted in a textual format to make the information accessable, retrievable and storable.
+- **Used PyTesseract** - a Python wrapper for the open-source OCR(Optical Character Recognition) library developed by Google, Tesseract.
+- *Directories created for each converted image -> PyTesseract for converting images to strings of text -> Extracted text stored under respective directories(.txt).*
+
+## Vector Embeddings
+- **Logic** : The extracted textual data are to be converted to vectore embeddings in N-dimensional space for capturing semantic meaning and relationships. Computational efficiency to be improved and for efficient data storage.
+- **Used Sentence-Transformer** - a Python library built on top of Pytorch and Hugging Face Transformers, for creating sentence embeddings. Uses pretrained transformer models. 
+- **We use "all-Mini-L6-v4" pretrained transformer model.** - Lightweight, high performance regarding semantic similarity, fast inference.
+- *Textual files retreived -> Converted to embeddings then formatted into arrays of embeddings -> each array embedding is indexed*
+
+## Vector Database
+- **Logic** : The vector embeddings of the documents are to be stored in a database to facilitate efficient retrieval, updation, deletion, and for computing semantic similarity - with respect to the user queries.
+- **Used FAISS database** - (Facebook AI Similarity Search) an open-source library developed by FAIR. It is optimized to better handle high-dimensional data and accurate similarity searches, thereby making it suitable for handling large scale datasets and high-dimensional vectors such as embeddings from NLP tasks.
+-*Built a faiss index -> created indexing for each embedding -> added to the faiss index -> saved to bin*
+
+## LLM (ChatBot)
+- **Logic** : A large language model is required for accepting semantically similar documents form the database (with respect to the user query) and responding with those documents as context. For implementing Retrieval Augmented Generation(RAG) upon the court documents.
+- **Used gemini-2.0-flash** - Multimodel LLM developed by Google.
+- *Used the model's API call for response generation -> we only make use of its text generation capabilities for our application.*
 
 
-
-
-# Scalability
-
+## User-Interface
+- **Logic** : A simple and intuitive UI to guide the users to query from the database as well as to chat with the llm.
+- **Used Streamlit** - an open-source Python library to create custom web applications.
+- *Built streamlit app to combine the modules for Faiss database, user query processing and response generation from the llm to implement a complete responsive system.*
+- *Added additional functionality for accpeting user inputs to retrieve data from the vector database(Querying), so as to retrive and display the appropriate court document within the web application.*     **ChatBot|Database querying**
 
 
