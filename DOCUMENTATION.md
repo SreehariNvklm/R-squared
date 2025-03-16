@@ -130,4 +130,3 @@ container.write(res)
 # Scalability - Possible further improvments
 - *Migrating from Streamlit to Django* : Streamlit is a python library that focuses on building simple, small scale web application. Therefore migrating to React with Django(amongst other) is necessary to make the web application scalable, introducing functionalities such as user logins and auth verifications.
 - *Using NER(Named Entity Recognition)* : for enforcing a layer of confidentiality and privacy. Names of individuals from the general public, involved in the court proceedings and other such sensitive information can be censored or removed from the responses.
--
