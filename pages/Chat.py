@@ -3,14 +3,22 @@ from src.database.db_query import DB_Query
 from dotenv import load_dotenv
 import os
 import google.generativeai as genai
-
 load_dotenv()
 
 st.set_page_config(page_title="Verdict Chat",page_icon=":speech_balloon:")
 
 def response_generation(user_query,case_file,model):
     history = []
-    prompt = f"Given the retrieved case file according to the user query: {user_query}, case file: {case_file}. Analyze the retrieved file and converse with the user only according to the user query. Don't give case file details even if obtained when the user greets you and on these specific occasions."
+    prompt = (
+        f"Your role is to act as a personal assistant to users and to help clarify the prompts provided by the user. "
+        f"Answer only according to the information given and under no circumstance must you provide the case files "
+        f"unless specifically prompted and when prompted, give only the specific detail that's asked. "
+        f"If the user merely greets or converses, don't bring up the case files. Using these conditions as a hard rule, "
+        f"retrieve the case file given as:{case_file} and answer the users query in the best way possible, avoiding "
+        f"ambiguity with the users query given as {user_query}")
+    # prompt = (f"Given the retrieved case file according to the user query: {user_query}, case file: {case_file}. Analyze the retrieved file and converse with the user only according"
+              # f" to the user query. Don't give case file details even if obtained when the user greets you and on these specific occasions.")
+
     response = model.send_message(prompt)
     history.append(response.text)
     return response.text
