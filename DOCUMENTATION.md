@@ -1,4 +1,7 @@
 # Architecture
+
+![workflow](workflow.png)
+
 ## Dataset
 The dataset given was in .pdf format. It contained 1,088 entries, each having an average of 5 pages per case. These cases have details like:
 
@@ -18,14 +21,17 @@ The main idea we propose is the use of a vector database as opposed to a standar
 This allows for a storage of 'similar' documents nearby. This means that the documents that are nearer each other are by nature similar in properties.
 
 ## Text retrieval
-
+The user's query is converted to vector embeddings and then a similarity metric(eg: Cosine similarity) is used to find the vectors(corresponding to each stored document) that are the most similar to the user query. The top "k" most similar docments are returned/retrieved from the vector database.
 
 ## ChatBot
-
+The retrieved text(court document) is sent to the large language model as context. The model then generates a response with respect to the user query and the passed textual document.
 
 # Design
-
-
+## PDF to Image conversion
+- **Used PyMuPdf** - a python binding for the MuPdf library.
+                   - lightweight, high performance conversion of Pdf files to other supported formats.
+                   - here used for pdf to image conversion.
+- Directories created for each pdf file -> Converted to image file(per pdf page) -> stored under respected file directory
 
 
 
