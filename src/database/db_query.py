@@ -1,7 +1,5 @@
 import faiss
-import numpy as np
 from sentence_transformers import SentenceTransformer
-from spellchecker import SpellChecker
 import os
 from dotenv import load_dotenv
 import google.generativeai as genai
@@ -14,7 +12,6 @@ class DB_Query:
     self.model = SentenceTransformer("all-MiniLM-L6-v2")
     self.embedding_dim = 384
     self.index_id = faiss.read_index("R-squared/faiss_index.bin")
-    self.speller = SpellChecker()
     genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
     self.gen_model = genai.GenerativeModel("gemini-2.0-flash")
 
