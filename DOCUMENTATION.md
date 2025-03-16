@@ -1,5 +1,5 @@
 # Architecture
-
+<src image="workflow.png" alt="drawing" width="200"/>
 ![workflow](workflow.png)
 
 ## Dataset
