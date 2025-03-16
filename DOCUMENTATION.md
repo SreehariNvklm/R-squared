@@ -98,7 +98,7 @@ faiss.write_index(index, "R-squared/faiss_index.bin")
 - *Used gemini-2.0-flash* - Multimodel LLM developed by Google.
 ```bash
 import google.generativeai as genai
-gen_model = genai.GenerativeModel("gemini-2.0-flash")
+gen_model = genai.GenerativeModel("gemini-1.5-flash")
 ```
 - Used the model's API call for response generation -> we only make use of its text generation capabilities for our application.
 ```bash
