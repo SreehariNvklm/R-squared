@@ -27,8 +27,11 @@ The user's query is converted to vector embeddings and then a similarity metric(
 The retrieved text(court document) is sent to the large language model as context. The model then generates a response with respect to the user query and the passed textual document.
 
 # Design
-
-
+## PDF to Image conversion
+- **Used PyMuPdf** - a python binding for the MuPdf library.
+                   - lightweight, high performance conversion of Pdf files to other supported formats.
+                   - here used for pdf to image conversion.
+- Directories created for each pdf file -> Converted to image file(per pdf page) -> stored under respected file directory
 
 
 
