@@ -1,6 +1,6 @@
 # Architecture
 
-![workflow](workflow.png {width=40px height=400px})
+![workflow](workflow.png {width=20px height=200px})
 
 ## Dataset
 The dataset given was in .pdf format. It contained 1,088 entries, each having an average of 5 pages per case. These cases have details like:
