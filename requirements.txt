@@ -3,3 +3,4 @@ pytesseract
 streamlit
 pymupdf
 sentence-transformers
+google-generativeai

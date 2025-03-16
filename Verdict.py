@@ -1,6 +1,7 @@
 from src.database.db_query import DB_Query
 import streamlit as st
 
+st.set_page_config(page_title="Project Verdict",page_icon=":grey_question:")
 st.header("Project Verdict")
 st.write("Search case files:")
 

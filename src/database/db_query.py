@@ -1,12 +1,21 @@
 import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
+from spellchecker import SpellChecker
+import os
+from dotenv import load_dotenv
+import google.generativeai as genai
+
+load_dotenv()
 
 class DB_Query:
   def __init__(self):
     self.model = SentenceTransformer("all-MiniLM-L6-v2")
     self.embedding_dim = 384
     self.index_id = faiss.read_index("R-squared/faiss_index.bin")
+    self.speller = SpellChecker()
+    genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+    self.gen_model = genai.GenerativeModel("gemini-2.0-flash")
 
   def search_faiss(self, query_text, top_k=3):
     """Searches FAISS for similar documents and returns detailed results."""
@@ -18,7 +27,9 @@ class DB_Query:
     with open(("R-squared/output_text/"+str(indices[0][0])+"/text_"+str(indices[0][0])+".txt"),"r") as file:
       f = file.read()
       print(f)
-    return f
+    response = self.gen_model.generate_content(f"Provided a case file report, which is publicly available. Correct the spelling only if there is a mistake and report the file as such. No extra content generation is allowed. Don't add any extra line from your intelligence. Don't add like, File corrected:, Correctly spelled: or any as such Case file report: {f}")
+    
+    return response.text
 
 # Example Query
 # query = """
