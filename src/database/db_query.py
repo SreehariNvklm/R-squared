@@ -2,19 +2,29 @@ import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
+# model = SentenceTransformer("all-MiniLM-L6-v2")
 
-embedding_dim = 384
-index = faiss.IndexFlatL2(embedding_dim)
-index_id = faiss.read_index("R-squared/faiss_index.bin")
+# embedding_dim = 384
+# index = faiss.IndexFlatL2(embedding_dim)
+# index_id = faiss.read_index("R-squared/faiss_index.bin")
 
-def search_faiss(query_text, top_k=3):
+class DB_Query:
+  def __init__(self):
+    self.model = SentenceTransformer("all-MiniLM-L6-v2")
+    self.embedding_dim = 384
+    self.index_id = faiss.read_index("R-squared/faiss_index.bin")
+
+  def search_faiss(self, query_text, top_k=3):
     """Searches FAISS for similar documents and returns detailed results."""
-    query_embedding = model.encode([query_text]).astype("float32")
+    query_embedding = self.model.encode([query_text]).astype("float32")
 
-    distances, indices = index_id.search(query_embedding, top_k)
-
-    return indices
+    distances, indices = self.index_id.search(query_embedding, top_k)
+    
+    f = ""
+    with open(("R-squared/output_text/"+str(indices[0][0])+"/text_"+str(indices[0][0])+".txt"),"r") as file:
+      f = file.read()
+      print(f)
+    return f
 
 # Example Query
 query = """
@@ -175,8 +185,13 @@ Judicial | Class Magistrate-V,
 ‘Thiruvananthapuram,
 /rrue copy/!
 """
-retrieved_docs = search_faiss(query, top_k=1)
 
-with open(("R-squared/output_text/"+str(retrieved_docs[0][0])+"/text_"+str(retrieved_docs[0][0])+".txt"),"r") as file:
-    f = file.read()
-    print(f)
+db = DB_Query()
+res = db.search_faiss(query,1)
+print(res)
+
+# retrieved_docs = search_faiss(query, top_k=1)
+
+# with open(("R-squared/output_text/"+str(retrieved_docs[0][0])+"/text_"+str(retrieved_docs[0][0])+".txt"),"r") as file:
+#     f = file.read()
+#     print(f)
