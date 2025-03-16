@@ -28,13 +28,14 @@ The retrieved text(court document) is sent to the large language model as contex
 
 # Design
 ## PDF to Image conversion
-- **Used PyMuPdf** - a python binding for the MuPdf library.
-                   - lightweight, high performance conversion of Pdf files to other supported formats.
-                   - here used for pdf to image conversion.
-- Directories created for each pdf file -> Converted to image file(per pdf page) -> stored under respected file directory
+- **Used PyMuPdf** - a Python binding for the MuPdf library to facilitate lightweight, high performance conversion of Pdf files to other supported formats, here for pdf to image conversions.
+- **Logic** : Straightforward text extraction from the pdfs not possible due to its inherent image nature. Therefore conversions to image files is necessary.
+- *Directories created for each pdf file -> Converted to image file(per pdf page) -> stored under respected file directories(.png).*
 
-
-
+## Text extraction from Image files
+- **Used PyTesseract** - a Python wrapper for the open-source OCR(Optical Character Recognition) library developed by Google, Tesseract.
+- **Logic** : The contents present in the images are to be extracted in a textual format to make the information accessable, retrievable and storable.
+- *Directories created for each converted image -> PyTesseract for converting images to strings of text -> Extracted text stored under respective directories(.txt).*
 
 # Scalability
 
