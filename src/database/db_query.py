@@ -15,23 +15,47 @@ class DB_Query:
     genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
     self.gen_model = genai.GenerativeModel("gemini-2.0-flash")
 
+  # def search_faiss(self, query_text, top_k=3):
+  #   """Searches FAISS for similar documents and returns detailed results."""
+  #   query_embedding = self.model.encode([query_text]).astype("float32")
+
+  #   distances, indices = self.index_id.search(query_embedding, top_k)
+    
+  #   f = ""
+  #   j = 0
+  #   for i in glob.glob("R-squared/output_text/*/*.txt"):
+  #     if j == indices[0][0]:
+  #       with open(i,"r",encoding='utf-8') as file:
+  #         f = file.read()
+  #         print(f)
+  #     j += 1
+  #   response = self.gen_model.generate_content(f"Provided a case file report, which is publicly available. Correct the spelling only if there is a mistake and report the file as such. No extra content generation is allowed. Don't add any extra line from your intelligence. Don't add like, File corrected:, Correctly spelled: or any as such Case file report: {f}")
+    
+  #   return response.text
   def search_faiss(self, query_text, top_k=3):
-    """Searches FAISS for similar documents and returns detailed results."""
     query_embedding = self.model.encode([query_text]).astype("float32")
 
     distances, indices = self.index_id.search(query_embedding, top_k)
-    
-    f = ""
-    j = 0
-    for i in glob.glob("R-squared/output_text/*/*.txt"):
-      if j == indices[0][0]:
-        with open(i,"r",encoding='utf-8') as file:
-          f = file.read()
-          print(f)
-      j += 1
-    response = self.gen_model.generate_content(f"Provided a case file report, which is publicly available. Correct the spelling only if there is a mistake and report the file as such. No extra content generation is allowed. Don't add any extra line from your intelligence. Don't add like, File corrected:, Correctly spelled: or any as such Case file report: {f}")
-    
+
+    files = []
+    all_texts = ""
+    txt_files = sorted(glob.glob("R-squared/output_text/*/*.txt"))
+
+    for idx in indices[0][:top_k]:
+        if 0 <= idx < len(txt_files):
+            with open(txt_files[idx], "r", encoding="utf-8") as file:
+                text = file.read()
+                files.append(text)
+                all_texts += f"\n\n{text}"
+
+    response = self.gen_model.generate_content(
+        f"Provided multiple case file reports, which are publicly available. "
+        f"Correct the spelling only if there is a mistake and return the files as such. "
+        f"No extra content generation is allowed. Keep them separate.\n\n{all_texts}"
+    )
+
     return response.text
+
 
 # Example Query
 # query = """
