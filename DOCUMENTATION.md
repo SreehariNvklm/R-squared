@@ -1,6 +1,6 @@
 # Architecture
+
 <src image="workflow.png" alt="drawing" width="200"/>
-![workflow](workflow.png)
 
 ## Dataset
 The dataset given was in .pdf format. It contained 1,088 entries, each having an average of 5 pages per case. These cases have details like:
