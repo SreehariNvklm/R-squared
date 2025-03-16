@@ -1,6 +1,6 @@
 # Architecture
 
-![workflow](workflow.png {width=20px height=200px})
+![workflow](workflow.png)
 
 ## Dataset
 The dataset given was in .pdf format. It contained 1,088 entries, each having an average of 5 pages per case. These cases have details like:
@@ -45,4 +45,19 @@ The retrieved text(court document) is sent to the large language model as contex
 
 ## Vector Database
 - **Logic** : The vector embeddings of the documents are to be stored in a database to facilitate efficient retrieval, updation, deletion, and for computing semantic similarity - with respect to the user queries.
-- **Used FAISS database**
+- **Used FAISS database** - (Facebook AI Similarity Search) an open-source library developed by FAIR. It is optimized to better handle high-dimensional data and accurate similarity searches, thereby making it suitable for handling large scale datasets and high-dimensional vectors such as embeddings from NLP tasks.
+-*Built a faiss index -> created indexing for each embedding -> added to the faiss index -> saved to bin*
+
+## LLM (ChatBot)
+- **Logic** : A large language model is required for accepting semantically similar documents form the database (with respect to the user query) and responding with those documents as context. For implementing Retrieval Augmented Generation(RAG) upon the court documents.
+- **Used gemini-2.0-flash** - Multimodel LLM developed by Google.
+- *Used the model's API call for response generation -> we only make use of its text generation capabilities for our application.*
+
+
+## User-Interface
+- **Logic** : A simple and intuitive UI to guide the users to query from the database as well as to chat with the llm.
+- **Used Streamlit** - an open-source Python library to create custom web applications.
+- *Built streamlit app to combine the modules for Faiss database, user query processing and response generation from the llm to implement a complete responsive system.*
+- *Added additional functionality for accpeting user inputs to retrieve data from the vector database(Querying), so as to retrive and display the appropriate court document within the web application.*     **ChatBot|Database querying**
+
+
