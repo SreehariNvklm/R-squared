@@ -1,6 +1,6 @@
 # Architecture
 
-![workflow](workflow.png)
+![workflow](workflow.png {width=40px height=400px})
 
 ## Dataset
 The dataset given was in .pdf format. It contained 1,088 entries, each having an average of 5 pages per case. These cases have details like:
@@ -28,16 +28,21 @@ The retrieved text(court document) is sent to the large language model as contex
 
 # Design
 ## PDF to Image conversion
-- **Used PyMuPdf** - a Python binding for the MuPdf library to facilitate lightweight, high performance conversion of Pdf files to other supported formats, here for pdf to image conversions.
 - **Logic** : Straightforward text extraction from the pdfs not possible due to its inherent image nature. Therefore conversions to image files is necessary.
+- **Used PyMuPdf** - a Python binding for the MuPdf library to facilitate lightweight, high performance conversion of Pdf files to other supported formats, here for pdf to image conversions.
 - *Directories created for each pdf file -> Converted to image file(per pdf page) -> stored under respected file directories(.png).*
 
 ## Text extraction from Image files
-- **Used PyTesseract** - a Python wrapper for the open-source OCR(Optical Character Recognition) library developed by Google, Tesseract.
 - **Logic** : The contents present in the images are to be extracted in a textual format to make the information accessable, retrievable and storable.
+- **Used PyTesseract** - a Python wrapper for the open-source OCR(Optical Character Recognition) library developed by Google, Tesseract.
 - *Directories created for each converted image -> PyTesseract for converting images to strings of text -> Extracted text stored under respective directories(.txt).*
 
-# Scalability
+## Vector Embeddings
+- **Logic** : The extracted textual data are to be converted to vectore embeddings in N-dimensional space for capturing semantic meaning and relationships. Computational efficiency to be improved and for efficient data storage.
+- **Used Sentence-Transformer** - a Python library built on top of Pytorch and Hugging Face Transformers, for creating sentence embeddings. Uses pretrained transformer models. 
+- **We use "all-Mini-L6-v4" pretrained transformer model.** - Lightweight, high performance regarding semantic similarity, fast inference.
+- *Textual files retreived -> Converted to embeddings then formatted into arrays of embeddings -> each array embedding is indexed*
 
-
-
+## Vector Database
+- **Logic** : The vector embeddings of the documents are to be stored in a database to facilitate efficient retrieval, updation, deletion, and for computing semantic similarity - with respect to the user queries.
+- **Used FAISS database**
